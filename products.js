@@ -18,4 +18,13 @@ const productsData = [
     category: "casa",
     link: "https://s.shopee.com.br/50Pn6vyS3c"
   },
+  {
+    id: "P003",
+    img: "https://i.imgur.com/R19ZaBF.png",
+    title: "Suporte de Parede Multifuncional para Vassouras e Rodos — Organização Fácil",
+    desc: "Mantenha sua casa organizada e seus utensílios de limpeza sempre à mão com o Suporte Multifuncional de Parede. Compatível com vassouras, rodos, panos e outros itens, ele economiza espaço e protege seus objetos do desgaste. Fabricado em plástico resistente, suporta múltiplos itens e é ideal para cozinhas, banheiros ou áreas de serviço. Instalação simples e segura, mantendo tudo sempre no lugar!",
+    platform: "Shopee",
+    category: "casa",
+    link: "https://s.shopee.com.br/1BD4jlnm42"
+  },
 ];
