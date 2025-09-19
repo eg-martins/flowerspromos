@@ -1,337 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-<title>Flowers Promos | Catálogo Completo</title>
-<style>
-/* ===== BASE ===== */
-html,body{
-  height:100%;
-  margin:0;
-  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-  background: linear-gradient(-45deg,#fff3f8,#ffeef7,#fff8f0,#fdf0f7);
-  background-size:400% 400%;
-  animation: gradientFlow 12s ease infinite;
-  color:var(--text);
-  overflow-x:hidden;
-}
-@keyframes gradientFlow{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-body::-webkit-scrollbar{display:none;}
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255,200,220,0.4) 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: sparkle 6s linear infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-.page {
-  position: relative;
-  z-index: 1;
-}
-@keyframes sparkle {
-  from { background-position: 0 0; }
-  to { background-position: 60px 60px; }
-}
-
-header{
-  position:fixed; top:0; left:0; right:0;
-  display:flex; justify-content:center; align-items:center;
-  padding:14px 20px;
-  background: rgba(255, 27, 68, 0.85);
-  backdrop-filter: blur(14px) saturate(160%);
-  border:1px solid rgba(255,255,255,0.3);
-  box-shadow:0 8px 24px rgba(216,107,167,0.25);
-  z-index:1002;
-}
-header .logo{
-  display:flex; align-items:center;
-}
-header .logo h1{
-  font-family: 'Style Script', cursive;
-  font-size:35px;
-  color:rgb(255, 255, 255);
-  margin:0;
-}
-
-/* ===== TOPO ===== */
-.topbar{
-  max-width:1100px;
-  margin:calc(80px + 20px) auto 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 20px;
-  gap:20px;
-}
-.categories{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.categories button{
-  padding:10px 16px;
-  border:none;
-  border-radius:6px;
-  background:#f8d1bf;
-  cursor:pointer;
-  font-size:14px;
-  transition:all 0.25s ease;
-  height:42px;
-  display:flex;
-  align-items:center;
-}
-.categories button:hover{
-  background:#ff4d6d;
-  color:white;
-  transform:translateY(-2px);
-  box-shadow:0 4px 10px rgba(255,77,109,0.4);
-}
-.categories button.active{
-  background:#ff4d6d;
-  color:white;
-}
-.search-box{
-  position:relative;
-  flex:1;
-  max-width:300px;
-  display:flex;
-  align-items:center;
-}
-.search-box input{
-  width:100%;
-  padding:10px 36px 10px 12px;
-  border:1px solid #ddd;
-  border-radius:6px;
-  font-size:14px;
-  height:42px;
-  box-sizing:border-box;
-}
-.clear-btn{
-  position:absolute;
-  right:10px;
-  background:#ff4d6d;
-  color:white;
-  border:none;
-  border-radius:50%;
-  width:20px; height:20px;
-  font-size:12px;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  padding:0;
-}
-
-/* ===== CARDS ===== */
-.products{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 20px 40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(250px,1fr));
-  gap:20px;
-}
-.product{
-  background:white;
-  border:1px solid #eee;
-  border-radius:8px;
-  padding:16px;
-  text-align:center;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  animation:fadeInUp 0.5s ease both;
-  transition:all 0.3s ease;
-  display:flex;
-  flex-direction:column;
-  position:relative;
-}
-.product:hover{
-  transform:translateY(-6px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
-}
-.product img{
-  max-width:100%;
-  border-radius:6px;
-  margin-bottom:10px;
-}
-.product h3{margin:10px 0 6px; font-size:16px;}
-.product p{margin:4px 0; font-size:14px; color:#555;}
-.product .platform{
-  margin-top:6px;
-  font-weight:bold;
-  color:#333;
-  font-size:13px;
-}
-.product .bottom{
-  margin-top:auto;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-.product a{
-  background:#ff4d6d;
-  color:white;
-  text-decoration:none;
-  padding:10px 14px;
-  border-radius:4px;
-  transition:all 0.25s ease;
-}
-.product a:hover{
-  background:#e63b5d;
-  transform:translateY(-2px);
-  box-shadow:0 4px 10px rgba(255,77,109,0.4);
-}
-.number{
-  position:absolute;
-  top:10px;
-  left:12px;
-  background:linear-gradient(90deg,#ff4d6d,#c25991);
-  color:#fff;
-  font-weight:700;
-  font-size:.9rem;
-  padding:.36rem .7rem;
-  border-bottom-right-radius:10px;
-  transform:rotate(-4deg);
-  box-shadow:0 6px 14px rgba(194,95,127,0.18);
-  z-index:5;
-}
-@keyframes fadeInUp{from{opacity:0; transform:translateY(20px);}to{opacity:1; transform:translateY(0);}}
-
-@media(max-width:768px){
-  .topbar{flex-direction:column;align-items:center;}
-  .categories{justify-content:center;}
-  .search-box{max-width:100%;width:100%;margin-top:12px;}
-  .search-box input{width:100%;}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  <title>Flowers Promos | Catálogo Completo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page">
-<header>
-  <div class="logo">
-    <h1>Flowers Promos</h1>
+  <div class="page">
+    <header>
+      <div class="logo"><h1>Flowers Promos</h1></div>
+    </header>
+
+    <div class="topbar">
+      <div class="categories">
+        <button data-category="all">Todos</button>
+        <button data-category="beleza">Beleza</button>
+        <button data-category="casa">Casa</button>
+        <button data-category="suplementos">Suplementos</button>
+        <button data-category="saude">Saúde</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Pesquisar...">
+        <button class="clear-btn" id="clearBtn">✖</button>
+      </div>
+    </div>
+
+    <div id="products" class="products"></div>
+    <div id="noResults" style="display:none;text-align:center;margin:20px;color:#666;">Nenhum produto encontrado.</div>
+    <div id="pagination" class="pagination"></div>
   </div>
-</header>
 
-<div class="topbar">
-  <div class="categories">
-    <button data-category="all">Todos</button>
-    <button data-category="beleza">Beleza</button>
-     <button data-category="casa">Casa</button>
-    <button data-category="suplementos">Suplementos</button>
-    <button data-category="saude">Saúde</button>
-  </div>
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Pesquisar...">
-    <button class="clear-btn" id="clearBtn">✖</button>
-  </div>
-</div>
-
-<div id="products" class="products"></div>
-<div id="noResults" style="display:none;text-align:center;margin:20px;color:#666;">Nenhum produto encontrado.</div>
-</div>
-
-<script>
-/************** DADOS **************/
-const productsData = [
-  {id:"P001",img:"https://i.imgur.com/XfuJFf9.png",title:"Escova Secadora 3 em 1 — Seca, Alisa e Modela com Brilho de Salão",desc:"Diga adeus à rotina demorada com secador, prancha e modelador! A Escova Secadora Elétrica 3 em 1 combina tudo em um só aparelho, permitindo secar, alisar e modelar os fios em poucos minutos. Com tecnologia de íons negativos, elimina o frizz, protege a umidade natural e deixa o cabelo macio, sedoso e cheio de brilho. Potência de 1000W para resultados rápidos e eficazes. Ideal para todos os tipos de cabelo!",platform:"Shopee",category:"beleza",link:"https://s.shopee.com.br/70AqHmYs5l"},
-  {id:"P002",img:"https://i.imgur.com/xf49VdO.png",title:"Máquina Automática Para Descascar Alho e Frutas — Praticidade Instantânea",desc:"Chega de perder tempo descascando alho, tomates, uvas e outras frutas pequenas! Com a Máquina Automática de Descascamento, basta apertar um botão e o trabalho pesado é feito em segundos. Perfeita para uso doméstico ou comercial, ela descasca de forma rápida e delicada, preservando a polpa dos alimentos e trazendo muito mais agilidade para sua cozinha.",platform:"Shopee",category:"casa",link:"https://s.shopee.com.br/50Pn6vyS3c"},
-];
-
-/************** RENDER **************/
-const productsEl = document.getElementById('products');
-const noResultsEl = document.getElementById('noResults');
-const searchInput = document.getElementById('search');
-const clearBtn = document.getElementById('clearBtn');
-const categoryButtons = document.querySelectorAll('.categories button');
-
-function renderProducts(filter = "", category = "all"){
-  const q = String(filter || "").trim().toLowerCase();
-  productsEl.innerHTML = "";
-  let found = false;
-
-  productsData.forEach((prod, index) => {
-    const number = String(index+1).padStart(2,'0');
-    const matchesText = 
-      q === "" ||
-      prod.title.toLowerCase().includes(q) ||
-      prod.platform.toLowerCase().includes(q) ||
-      number.includes(q) ||
-      q === String(index+1);
-
-    const matchesCategory = category === "all" || prod.category === category;
-
-    if(matchesText && matchesCategory){
-      found = true;
-      const card = document.createElement('article');
-      card.className = 'product';
-      card.dataset.id = prod.id; // 👈 ID interno
-
-      card.innerHTML = `
-         <span class="number">#${number}</span>
-         <img src="${prod.img}" alt="${prod.title}">
-         <h3>${prod.title}</h3>
-         <p>${prod.desc}</p>
-         <div class="bottom">
-           <a href="${prod.link}">Compre agora</a>
-           <p class="platform">Disponível em: ${prod.platform}</p>
-         </div>
-      `;
-      productsEl.appendChild(card);
-    }
-  });
-
-  document.querySelectorAll('.product').forEach((card, i) => {
-    card.style.animationDelay = (i * 0.12) + 's';
-  });
-
-  noResultsEl.style.display = found ? 'none' : 'block';
-}
-
-/************** EVENTOS **************/
-searchInput.addEventListener('input', (e)=>{
-  const q = e.target.value.toLowerCase();
-  const activeCategory = document.querySelector('.categories button.active').dataset.category;
-  renderProducts(q, activeCategory);
-  clearBtn.style.display = q ? 'flex' : 'none';
-});
-
-clearBtn.addEventListener('click', ()=>{
-  searchInput.value = '';
-  const activeCategory = document.querySelector('.categories button.active').dataset.category;
-  renderProducts('', activeCategory);
-  clearBtn.style.display = 'none';
-  searchInput.focus();
-});
-
-categoryButtons.forEach(btn=>{
-  btn.addEventListener('click', ()=>{
-    categoryButtons.forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const q = searchInput.value.toLowerCase();
-    renderProducts(q, btn.dataset.category);
-  });
-});
-
-window.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelector('.categories button[data-category="all"]').classList.add('active');
-  renderProducts('');
-  clearBtn.style.display = 'none';
-});
-</script>
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
