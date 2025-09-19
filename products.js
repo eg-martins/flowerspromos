@@ -27,4 +27,13 @@ const productsData = [
     category: "casa",
     link: "https://s.shopee.com.br/1BD4jlnm42"
   },
+  {
+    id: "P004",
+    img: "https://i.imgur.com/JkkdQYc.png",
+    title: "Protetor de Calcanhar Adesivo – Conforto e Proteção para Seus Sapatos",
+    desc: "Diga adeus ao desconforto causado por sapatos apertados! O Protetor de Calcanhar Adesivo oferece acolchoamento macio e proteção eficaz contra fricção, prevenindo bolhas e irritações. Fácil de aplicar e remover, discreto e compatível com todos os tipos de calçados, garante conforto prolongado durante o uso de tênis, botas ou saltos altos. Ideal para quem passa longas horas calçando sapatos e deseja um ajuste perfeito!",
+    platform: "Shopee",
+    category: "acessorios",
+    link: "https://s.shopee.com.br/3qDpwQvBjN"
+  },
 ];
