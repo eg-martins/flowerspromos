@@ -36,4 +36,13 @@ const productsData = [
     category: "acessorios",
     link: "https://s.shopee.com.br/3qDpwQvBjN"
   },
+   {
+    id: "P005",
+    img: "https://i.imgur.com/ERHmTFa.png",
+    title: "Aparador Retrô 2 Prateleiras — Cantinho do Café Elegante e Funcional",
+    desc: "Deixe seu cantinho do café organizado e com estilo com o Aparador Retrô de 2 Prateleiras. Fabricado em MDF de alta qualidade, com acabamento branco e mogno, ele combina beleza e funcionalidade. Montagem prática e rápida, sem necessidade de ferramentas. Ideal para organizar bebidas, utensílios ou objetos decorativos, tornando seu espaço mais elegante e funcional.",
+    platform: "Shopee",
+    category: "casa",
+    link: "https://s.shopee.com.br/7Kni94AWPp"
+  },
 ];
