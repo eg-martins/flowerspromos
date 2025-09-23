@@ -52,7 +52,7 @@ const productsData = [
     {
     id: "P006",
     img: "https://i.imgur.com/zSzcpD8.png",
-    title: "Focus by Floow",
+    title: "Focus by Floow — Aumente seu Foco e Desempenho",
     desc: "Entre em estado de super foco e aumente sua produtividade com o Focus by Floow. Ideal para quem deseja manter a concentração máxima, otimizar tarefas e alcançar resultados mais rápidos, ajudando você a dar o seu melhor em todas as atividades do dia.",
     platform: "Site Oficial",
     category: ["suplementos"],
@@ -62,11 +62,31 @@ const productsData = [
     {
     id: "P007",
     img: "https://i.imgur.com/N45MfEG.png",
-    title: "BigBOOM Creatina",
+    title: "BigBoom Creatina 3 em 1 — Força, Recuperação e Beleza",
     desc: "A BigBoom Creatina 3 em 1 é a primeira do Brasil a unir creatina, colágeno e BCAA em um único suplemento. A creatina ajuda no aumento da força, o colágeno preserva sua beleza e saúde das articulações, pele, cabelo e unhas, e o BCAA garante melhor recuperação muscular. Disponível nos deliciosos sabores Pink Lemonade e Melancia (em breve). Ideal para quem quer performance completa com sabor incrível!",
     platform: "Site Oficial",
     category: ["suplementos"],
     subcategory: ["fitness"],
     link: "https://www.mktcorporate.com/bigboom"
+  },
+    {
+    id: "P008",
+    img: "https://i.imgur.com/n1dou6o.png",
+    title: "Sonotonina — Fórmula Natural para Dormir Bem e Acordar Revigorada",
+    desc: "O Sonotonina é uma fórmula natural com melatonina, projetada para regular o ciclo do sono e proporcionar noites tranquilas. Além de ajudar a dormir melhor, auxilia no bem-estar geral do corpo e possui ação antioxidante. Acorde revigorada e pronta para o dia com Sonotonina!",
+    platform: "Site Oficial",
+    category: ["suplementos"],
+    subcategory: ["vitaminas"],
+    link: "https://www.mktcorporate.com/sonotonina"
+  },
+    {
+    id: "P009",
+    img: "https://i.imgur.com/XmFhesM.png",
+    title: "DiurieFit Black — Pó Diurético 10x Mais Eficaz",
+    desc: "O DiurieFit Black é um pózinho diurético especialmente formulado para eliminar a retenção de líquidos, desinflamar o corpo e acelerar o metabolismo, queimando gordura muito mais rápido do que produtos em cápsulas. Perfeito para quem busca leveza, bem-estar e resultados eficientes de forma prática e saborosa.",
+    platform: "Site Oficial",
+    category: ["suplementos"],
+    subcategory: ["emagrecimento"],
+    link: "https://www.mktcorporate.com/diuriefitblack"
   },
 ];
