@@ -49,4 +49,24 @@ const productsData = [
     subcategory: ["decoracao"],
     link: "https://s.shopee.com.br/7Kni94AWPp"
   },
+    {
+    id: "P006",
+    img: "https://i.imgur.com/zSzcpD8.png",
+    title: "Focus by Floow",
+    desc: "Entre em estado de super foco e aumente sua produtividade com o Focus by Floow. Ideal para quem deseja manter a concentração máxima, otimizar tarefas e alcançar resultados mais rápidos, ajudando você a dar o seu melhor em todas as atividades do dia.",
+    platform: "Site Oficial",
+    category: ["suplementos"],
+    subcategory: ["vitaminas"],
+    link: "https://www.mktcorporate.com/focus"
+  },
+    {
+    id: "P007",
+    img: "https://i.imgur.com/N45MfEG.png",
+    title: "BigBOOM Creatina",
+    desc: "A BigBoom Creatina 3 em 1 é a primeira do Brasil a unir creatina, colágeno e BCAA em um único suplemento. A creatina ajuda no aumento da força, o colágeno preserva sua beleza e saúde das articulações, pele, cabelo e unhas, e o BCAA garante melhor recuperação muscular. Disponível nos deliciosos sabores Pink Lemonade e Melancia (em breve). Ideal para quem quer performance completa com sabor incrível!",
+    platform: "Site Oficial",
+    category: ["suplementos"],
+    subcategory: ["fitness"],
+    link: "https://www.mktcorporate.com/bigboom"
+  },
 ];
