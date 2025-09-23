@@ -89,4 +89,24 @@ const productsData = [
     subcategory: ["emagrecimento"],
     link: "https://www.mktcorporate.com/diuriefitblack"
   },
+    {
+    id: "P010",
+    img: "https://i.imgur.com/0K2m5Gu.png",
+    title: "Nulle — Reset Natural do Corpo e Mente",
+    desc: "O Nulle é uma fórmula com 5 tipos de magnésio e aminoácidos essenciais que ajudam seu corpo a desligar o “modo sobrevivência” ativado pelo estresse. Ele acalma o sistema nervoso, desinflama internamente e prepara seu organismo para funcionar da forma que deveria. Um sachê por dia é suficiente para sentir o efeito de reorganização interna e equilíbrio corporal.",
+    platform: "Site Oficial",
+    category: ["suplementos"],
+    subcategory: ["emagrecimento"],
+    link: "https://www.mktcorporate.com/nulle"
+  },
+    {
+    id: "P011",
+    img: "https://i.imgur.com/Befd9t3.png",
+    title: "CandCaps — Solução Natural para Candidíase",
+    desc: "O CandCaps é um suplemento natural desenvolvido para tratar a candidíase de dentro para fora. Equilibra a flora intestinal, fortalece o sistema imunológico e previne novas crises, oferecendo alívio duradouro e restaurando seu bem-estar íntimo. Diferente de tratamentos temporários, CandCaps promove saúde e conforto contínuos, ajudando você a viver sem desconfortos.",
+    platform: "Site Oficial",
+    category: ["saude"],
+    subcategory: ["bemestar"],
+    link: "https://www.mktcorporate.com/nulle"
+  },
 ];
