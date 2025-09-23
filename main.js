@@ -169,32 +169,52 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
   }
 
-  function updateActiveButtons(clickedBtn, clickCategoryForFilter) {
-    // clickedBtn: elemento clicado (pode ser top-level Todos, main-category, subcategory)
-    // clickCategoryForFilter: string da categoria usada para filtrar (ex: 'casa' ou 'cabelo') ou 'all'
-    clearSelectedClasses();
-    if (clickedBtn) {
-      // marca o botão clicado
-      clickedBtn.classList.add('selected');
+function updateActiveButtons(clickedBtn, clickCategoryForFilter) {
+  clearSelectedClasses();
+  if (clickedBtn) {
+    clickedBtn.classList.add('selected');
 
-      // se é subcategoria, também marca o main da categoria
-      const parentCategoryDiv = clickedBtn.closest('.category');
-      if (parentCategoryDiv) {
-        const mainBtn = parentCategoryDiv.querySelector('.main-category');
-        if (mainBtn && mainBtn !== clickedBtn) {
-          mainBtn.classList.add('selected');
-          parentCategoryDiv.classList.add('active'); // mantém aberto
-        }
+    const parentCategoryDiv = clickedBtn.closest('.category');
+    if (parentCategoryDiv) {
+      const mainBtn = parentCategoryDiv.querySelector('.main-category');
+      if (mainBtn && mainBtn !== clickedBtn) {
+        mainBtn.classList.add('selected');
+        parentCategoryDiv.classList.add('active');
       }
-    } else {
-      // nenhum botão -> marcar o top-level "Todos" (direto em .categories)
-      const topTodos = Array.from(categoriesContainer.children).find(ch => ch.tagName === 'BUTTON' && ch.dataset && ch.dataset.category === 'all');
-      if (topTodos) topTodos.classList.add('selected');
     }
-
-    // atualiza currentFilter (categoria usada pra busca)
-    currentFilter = (typeof clickCategoryForFilter === 'string') ? clickCategoryForFilter : 'all';
+  } else {
+    const topTodos = Array.from(categoriesContainer.children).find(
+      ch => ch.tagName === 'BUTTON' && ch.dataset && ch.dataset.category === 'all'
+    );
+    if (topTodos) topTodos.classList.add('selected');
   }
+
+  // atualiza currentFilter
+  currentFilter = (typeof clickCategoryForFilter === 'string') ? clickCategoryForFilter : 'all';
+
+  // --- NOVO: controlar destaques, título e classe de espaçamento ---
+  const highlightsSection = document.querySelector('.highlight-section');
+  const productsTitle = document.getElementById('productsTitle');
+  const page = document.querySelector('.page'); // wrapper principal
+
+  if (currentFilter === 'all') {
+    // mostra destaques e título padrão
+    if (highlightsSection) highlightsSection.style.display = 'block';
+    if (productsTitle) productsTitle.textContent = 'Todos os produtos';
+    if (page) page.classList.remove('category-mode');
+  } else {
+    // esconde destaques e coloca nome da categoria
+    if (highlightsSection) highlightsSection.style.display = 'none';
+    if (productsTitle) {
+      // pega o texto do botão clicado (mais amigável que usar o dataset)
+      const formatted = clickedBtn ? clickedBtn.textContent.trim() : currentFilter;
+      productsTitle.textContent = formatted;
+    }
+    if (page) page.classList.add('category-mode');
+  }
+}
+
+
 
   function resetSearch() {
     searchInput.value = "";
