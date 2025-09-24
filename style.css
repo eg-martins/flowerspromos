@@ -578,16 +578,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  font-weight: bold;
 }
 
-header .logo h1 {
-  font-family: 'Style Script', cursive;
-  font-size: 35px;
-  color: #fff;
-  margin: 0;
+.logo img {
+  height: 60%;   /* ajusta à altura do header */
+  max-height: 50px; /* limite máximo para não estourar */
+  width: auto;   /* mantém proporção */
+  object-fit: contain;
 }
+
 
 /* Topbar: container do menu e da pesquisa */
 .topbar {
