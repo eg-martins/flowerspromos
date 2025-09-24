@@ -216,11 +216,20 @@ function updateActiveButtons(clickedBtn, clickCategoryForFilter) {
 
 
 
-  function resetSearch() {
+function resetSearch() {
+  // limpa o campo e atualiza UI
+  if (searchInput) {
     searchInput.value = "";
-    clearBtn.style.display = 'none';
-    updateNotifDot();
+    // garante que o event listener de input seja acionado (atualiza botões/estado)
+    const ev = new Event('input', { bubbles: true, cancelable: true });
+    searchInput.dispatchEvent(ev);
   }
+  if (clearBtn && clearBtn.style) clearBtn.style.display = 'none';
+  if (typeof updateNotifDot === 'function') updateNotifDot();
+
+  // DEBUG: mostra estado atual
+  console.log('[resetSearch] currentFilter =', currentFilter);
+}
 
   // --- bolinha de notificação (cria apenas se houver searchBtn) ---
   let notifDot = null;
@@ -327,14 +336,21 @@ function updateActiveButtons(clickedBtn, clickCategoryForFilter) {
   }
 
   // limpar busca (x)
-  if (clearBtn) {
-    clearBtn.addEventListener('click', () => {
-      resetSearch();
-      currentPage = 1;
-      updateActiveButtons(null, 'all'); // volta ao TODOS
-      renderProducts("", "all");
-    });
-  }
+if (clearBtn) {
+  // garante que o botão não submet a página se envolver um form
+  try { clearBtn.type = 'button'; } catch (e) {}
+  clearBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    resetSearch();
+    currentPage = 1;
+
+    // Re-renderiza preservando o filtro atual (não força 'all')
+    console.log('[clearBtn] renderProducts with currentFilter =', currentFilter);
+    renderProducts("", currentFilter);
+  });
+}
 
   // modal close
   if (closeModalBtn) {
@@ -360,3 +376,90 @@ function updateActiveButtons(clickedBtn, clickCategoryForFilter) {
   }
 
 }); // fim DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryGradients = {
+        beleza: 'linear-gradient(90deg, transparent, #FF9A9E, #FAD0C4, transparent)',
+        casa: 'linear-gradient(90deg, transparent, #66A6FF, #89F7FE, transparent)',
+        acessórios: 'linear-gradient(90deg, transparent, #FBC2EB, #A6C1EE, transparent)',
+        suplementos: 'linear-gradient(90deg, transparent, #FBD786, #f7797d, transparent)',
+        saude: 'linear-gradient(90deg, transparent, #84FAB0, #8FD3F4, transparent)',
+        eletronicos: 'linear-gradient(90deg, transparent, #43C6AC, #191654, transparent)',
+        roupas: 'linear-gradient(90deg, transparent, #FFDEE9, #B5FFFC, transparent)',
+        esportes: 'linear-gradient(90deg, transparent, #F7971E, #FFD200, transparent)',
+        brinquedos: 'linear-gradient(90deg, transparent, #FF6A88, #FF99AC, transparent)',
+        computadores: 'linear-gradient(90deg, transparent, #2193b0, #6dd5ed, transparent)'
+    };
+
+    const defaultGradient = 'linear-gradient(90deg, transparent, #ff4d6d, transparent)';
+    const defaultTitle = "Todos os produtos";
+
+    const title = document.getElementById('productsTitle');
+    const section = document.querySelector('.highlight-section1');
+
+    function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function updateTitle(subCategory, mainCategory) {
+        if (!subCategory && (!mainCategory || mainCategory === 'all')) {
+            title.textContent = defaultTitle;
+            section.style.setProperty('--highlight-gradient', defaultGradient);
+            document.title = "Flowers Promos | Catálogo Completo";
+            return;
+        }
+        const displayName = subCategory ? capitalize(subCategory) : capitalize(mainCategory);
+        title.textContent = displayName;
+        const gradient = categoryGradients[mainCategory] || defaultGradient;
+        section.style.setProperty('--highlight-gradient', gradient);
+        document.title = `Flowers Promos | ${displayName}`;
+    }
+
+    // Subcategorias
+    document.querySelectorAll('.subcategory').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const subCategory = btn.getAttribute('data-category') !== 'all' ? btn.getAttribute('data-category') : null;
+            const mainCategory = btn.getAttribute('data-parent');
+            updateTitle(subCategory, mainCategory);
+        });
+    });
+
+    // Menu principal
+    document.querySelectorAll('.main-category').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const mainCategory = btn.getAttribute('data-category');
+
+            // Se tiver subcategoria e não for "all", apenas abre submenu
+            const hasSubmenu = document.querySelectorAll(`.subcategory[data-parent="${mainCategory}"]`).length > 0;
+            if (hasSubmenu && mainCategory !== 'all') {
+                return; // não faz nada
+            }
+
+            e.preventDefault();
+            if (mainCategory === 'all') {
+                updateTitle(null, 'all'); // Página inicial
+            } else {
+                updateTitle(null, mainCategory);
+            }
+        });
+    });
+
+    // Inicializa ao carregar a página
+    const activeSub = document.querySelector('.subcategory.active');
+    const activeCat = document.querySelector('.main-category.active');
+
+    if (activeSub) {
+        const subCategory = activeSub.getAttribute('data-category') !== 'all' ? activeSub.getAttribute('data-category') : null;
+        const mainCategory = activeSub.getAttribute('data-parent');
+        updateTitle(subCategory, mainCategory);
+    } else if (activeCat) {
+        const mainCategory = activeCat.getAttribute('data-category');
+        if (mainCategory === 'all') {
+            updateTitle(null, 'all');
+        } else {
+            updateTitle(null, mainCategory);
+        }
+    } else {
+        updateTitle(null, 'all'); // Página inicial padrão
+    }
+});
