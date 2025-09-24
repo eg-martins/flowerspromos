@@ -90,16 +90,17 @@ body::after {
   max-width: 1100px;
   margin: 5px auto 10px;
   padding: 20px;
+  --highlight-gradient: linear-gradient(90deg, transparent, #ff4d6d, transparent); /* cinza padrão */
 }
 .category-mode .highlight-section1 {
   margin-top: 80px; /* ajuste conforme a altura do header */
 }
 .highlight-section1 h2 {
-  position: relative;
+ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 2vw, 1.5rem); /* tamanho responsivo */
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 700;
   text-align: center;
   color: #ff4d6d;
@@ -111,10 +112,10 @@ body::after {
 
 .highlight-section1 h2::before,
 .highlight-section1 h2::after {
-  content: "";
-  flex: 1; /* linha ocupa o espaço disponível */
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #ff4d6d, transparent);
+  content: '';
+  flex: 1;               /* ocupa todo espaço disponível */
+  height: 4px;           /* altura da linha */
+  background: var(--highlight-gradient, #ccc);
 }
 
 /* Cards */
@@ -414,17 +415,16 @@ body::after {
 }
 
 /* ===== BORDER GRADIENTE POR CATEGORIA ===== */
-.product.cat-beleza::before { background: linear-gradient(90deg, #FF9A9E, #FAD0C4); }
-.product.cat-casa::before { background: linear-gradient(90deg, #66A6FF, #89F7FE); }
-.product.cat-acessorios::before { background: linear-gradient(90deg, #FBC2EB, #A6C1EE); }
-.product.cat-decoracao::before { background: linear-gradient(90deg, #FBC2EB, #A6C1EE); }
+.product.cat-beleza::before       { background: linear-gradient(90deg, #FF9A9E, #FAD0C4); }
+.product.cat-casa::before         { background: linear-gradient(90deg, #66A6FF, #89F7FE); }
+.product.cat-acessórios::before  { background: linear-gradient(90deg, #FBC2EB, #A6C1EE); }
 .product.cat-suplementos::before { background: linear-gradient(90deg, #FBD786, #f7797d); }
-.product.cat-saude::before { background: linear-gradient(90deg, #84FAB0, #8FD3F4); }
-.product.cat-eletronicos::before { background: linear-gradient(90deg, #43C6AC, #191654);}
-.product.cat-roupas::before { background: linear-gradient(90deg, #FFDEE9, #B5FFFC);}
-.product.cat-esportes::before { background: linear-gradient(90deg, #F7971E, #FFD200);}
-.product.cat-brinquedos::before { background: linear-gradient(90deg, #FF6A88, #FF99AC);}
-.product.cat-computadores::before { background: linear-gradient(90deg, #2193b0, #6dd5ed);}
+.product.cat-saude::before       { background: linear-gradient(90deg, #84FAB0, #8FD3F4); }
+.product.cat-eletronicos::before { background: linear-gradient(90deg, #43C6AC, #191654); }
+.product.cat-roupas::before      { background: linear-gradient(90deg, #FFDEE9, #B5FFFC); }
+.product.cat-esportes::before    { background: linear-gradient(90deg, #F7971E, #FFD200); }
+.product.cat-brinquedos::before  { background: linear-gradient(90deg, #FF6A88, #FF99AC); }
+.product.cat-computadores::before{ background: linear-gradient(90deg, #2193b0, #6dd5ed); }
 
 
 /* ===== ANIMAÇÕES ===== */
@@ -843,6 +843,7 @@ button.subcategory[data-category="all"]:hover {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  margin-left: 6px; /* 👈 pequeno espaço */
 }
 
 .clear-btn:hover {
