@@ -115,7 +115,7 @@ const productsData = [
     title: "Kit Banheiro Osaka 4 Peças em Cerâmica e Bambu",
     desc: "O Kit de Banheiro Osaka combina sofisticação e sustentabilidade em cada detalhe. Composto por porta escova de dentes, porta sabonete líquido, porta algodão/cotonete e bandeja, ele traz elegância e praticidade para o seu dia a dia. A cerâmica oferece resistência e charme, enquanto o bambu adiciona um toque natural e sustentável. Ideal para deixar seu banheiro mais organizado e aconchegante.",
     platform: "Shopee",
-    category: ["casaa"],
+    category: ["casa"],
     subcategory: ["decoracao"],
     link: "https://s.shopee.com.br/AA81KNo1Dt"
   },
