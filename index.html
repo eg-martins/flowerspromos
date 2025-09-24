@@ -18,7 +18,7 @@
 
       <div class="categories" id="categoriesMenu">
         <button data-category="all" class="main-category">Inicio</button>
-        <button data-category="acessorios" class="main-category">Acessórios</button>      
+        <button data-category="acessórios" class="main-category">Acessórios</button>      
 
       <div class="category">
         <button class="main-category has-submenu" data-category="beleza">Beleza</button>
@@ -45,8 +45,8 @@
         <button class="main-category has-submenu" data-category="casa">Casa</button>
         <div class="subcategories">
           <button class="subcategory" data-category="cozinha" data-parent="casa">Cozinha</button>
-          <button class="subcategory" data-category="decoracao" data-parent="casa">Decoração</button>
-          <button class="subcategory" data-category="organizacao" data-parent="casa">Organização</button>
+          <button class="subcategory" data-category="decoração" data-parent="casa">Decoração</button>
+          <button class="subcategory" data-category="organização" data-parent="casa">Organização</button>
           <button class="subcategory" data-category="all" data-parent="casa">Ver todos...</button>
         </div>
       </div>
@@ -164,7 +164,8 @@
   <!-- Modal de detalhes -->
   <div id="productModal" class="modal">
     <div class="modal-content">
-      <span id="closeModal" class="close-btn">✖</span>
+      <button id="clearBtn" class="clear-btn" type="button">×</button>
+
       <div id="modalBody"></div>
     </div>
   </div>
@@ -173,5 +174,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
-
