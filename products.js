@@ -27,7 +27,7 @@ const productsData = [
     desc: "Mantenha sua casa organizada e seus utensílios de limpeza sempre à mão com o Suporte Multifuncional de Parede. Compatível com vassouras, rodos, panos e outros itens, ele economiza espaço e protege seus objetos do desgaste. Fabricado em plástico resistente, suporta múltiplos itens e é ideal para cozinhas, banheiros ou áreas de serviço. Instalação simples e segura, mantendo tudo sempre no lugar!",
     platform: "Shopee",
     category: ["casa"],
-    subcategory: ["organizacao"],
+    subcategory: ["organização"],
     link: "https://s.shopee.com.br/1BD4jlnm42"
   },
   {
@@ -36,7 +36,7 @@ const productsData = [
     title: "Protetor de Calcanhar Adesivo – Conforto e Proteção para Seus Sapatos",
     desc: "Diga adeus ao desconforto causado por sapatos apertados! O Protetor de Calcanhar Adesivo oferece acolchoamento macio e proteção eficaz contra fricção, prevenindo bolhas e irritações. Fácil de aplicar e remover, discreto e compatível com todos os tipos de calçados, garante conforto prolongado durante o uso de tênis, botas ou saltos altos. Ideal para quem passa longas horas calçando sapatos e deseja um ajuste perfeito!",
     platform: "Shopee",
-    category: ["acessorios"],
+    category: ["acessórios"],
     link: "https://s.shopee.com.br/3qDpwQvBjN"
   },
   {
@@ -46,7 +46,7 @@ const productsData = [
     desc: "Deixe seu cantinho do café organizado e com estilo com o Aparador Retrô de 2 Prateleiras. Fabricado em MDF de alta qualidade, com acabamento branco e mogno, ele combina beleza e funcionalidade. Montagem prática e rápida, sem necessidade de ferramentas. Ideal para organizar bebidas, utensílios ou objetos decorativos, tornando seu espaço mais elegante e funcional.",
     platform: "Shopee",
     category: ["casa"],
-    subcategory: ["decoracao"],
+    subcategory: ["decoração"],
     link: "https://s.shopee.com.br/7Kni94AWPp"
   },
     {
@@ -116,7 +116,7 @@ const productsData = [
     desc: "O Kit de Banheiro Osaka combina sofisticação e sustentabilidade em cada detalhe. Composto por porta escova de dentes, porta sabonete líquido, porta algodão/cotonete e bandeja, ele traz elegância e praticidade para o seu dia a dia. A cerâmica oferece resistência e charme, enquanto o bambu adiciona um toque natural e sustentável. Ideal para deixar seu banheiro mais organizado e aconchegante.",
     platform: "Shopee",
     category: ["casa"],
-    subcategory: ["decoracao"],
+    subcategory: ["decoração"],
     link: "https://s.shopee.com.br/AA81KNo1Dt"
   },
 ];
