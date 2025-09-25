@@ -129,4 +129,14 @@ const productsData = [
     subcategory: ["decoração"],
     link: "https://s.shopee.com.br/5AjMz3MqxE"
   },
+    {
+    id: "P014",
+    img: "images/produtos/F-014.png",
+    title: "Maleta de Maquiagem Profissional com Espelho LED e Divisórias Ajustáveis",
+    desc: "A Maleta de Maquiagem com Espelho LED é perfeita para quem busca praticidade, organização e estilo. Com iluminação ajustável, divisórias internas de vários tamanhos e compartimentos espaçosos, você mantém todos os produtos à mão e ainda garante uma aplicação de maquiagem perfeita, independente da luz ambiente. Portátil, elegante e durável, é ideal para iniciantes ou profissionais e ainda possui cabo USB para recarregar o LED, garantindo conforto e eficiência em qualquer lugar.",
+    platform: "Shopee",
+    category: ["beleza"],
+    subcategory: ["maquiagem"],
+    link: "https://s.shopee.com.br/5ffdc0ZhjO"
+  },
 ];
