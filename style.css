@@ -3,7 +3,7 @@ html,body{
   height:100%;
   margin:0;
   font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-  background: linear-gradient(-45deg,#ffabce,#c33380,#ffc37fb4,#7e2f59);
+  background: linear-gradient(-45deg, #ffe5d9, #ffc1b6, #ffb6b9, #fff1e6);
   background-size:400% 400%;
   animation: gradientFlow 30s ease infinite;
   color:var(--text);
