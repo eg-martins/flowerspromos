@@ -1,4 +1,3 @@
-// Lista de produtos
 const productsData = [
 {
     id: "P001",
