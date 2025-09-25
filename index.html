@@ -5,202 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
   <title>Flowers Promos | Catálogo Completo</title>
-   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="page">
-
     <header>
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="categories" id="categoriesMenu">
+          <button data-category="all" class="main-category">Início</button>
+          <button data-category="acessórios" class="main-category">Acessórios</button>
+          <div class="category">
+            <button class="main-category has-submenu" data-category="beleza">Beleza</button>
+            <div class="subcategories">
+              <button class="subcategory" data-category="cabelo" data-parent="beleza">Cabelo</button>
+              <button class="subcategory" data-category="maquiagem" data-parent="beleza">Maquiagem</button>
+              <button class="subcategory" data-category="skincare" data-parent="beleza">Skincare</button>
+              <button class="subcategory" data-category="all" data-parent="beleza">Ver todos...</button>
+            </div>
+          </div>
+          <div class="category">
+            <button class="main-category has-submenu" data-category="casa">Casa</button>
+            <div class="subcategories">
+              <button class="subcategory" data-category="cozinha" data-parent="casa">Cozinha</button>
+              <button class="subcategory" data-category="decoração" data-parent="casa">Decoração</button>
+              <button class="subcategory" data-category="organização" data-parent="casa">Organização</button>
+              <button class="subcategory" data-category="all" data-parent="casa">Ver todos...</button>
+            </div>
+          </div>
+          <div class="category">
+            <button class="main-category has-submenu" data-category="suplementos">Suplementos</button>
+            <div class="subcategories">
+              <button class="subcategory" data-category="vitaminas" data-parent="suplementos">Vitaminas</button>
+              <button class="subcategory" data-category="fitness" data-parent="suplementos">Fitness</button>
+              <button class="subcategory" data-category="emagrecimento" data-parent="suplementos">Emagrecimento</button>
+              <button class="subcategory" data-category="all" data-parent="suplementos">Ver todos...</button>
+            </div>
+          </div>
+          <div class="category">
+            <button class="main-category has-submenu" data-category="saude">Saúde</button>
+            <div class="subcategories">
+              <button class="subcategory" data-category="bemestar" data-parent="saude">Bem-estar</button>
+              <button class="subcategory" data-category="all" data-parent="saude">Ver todos...</button>
+            </div>
+          </div>
+        </div>
 
-     <div class="topbar">
-     <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+        <div class="logo"><img src="images/logo.svg" alt="Flowers" width="200"></div>
 
-      <div class="categories" id="categoriesMenu">
-        <button data-category="all" class="main-category">Inicio</button>
-        <button data-category="acessórios" class="main-category">Acessórios</button>      
-
-      <div class="category">
-        <button class="main-category has-submenu" data-category="beleza">Beleza</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="cabelo" data-parent="beleza">Cabelo</button>
-          <button class="subcategory" data-category="maquiagem" data-parent="beleza">Maquiagem</button>
-          <button class="subcategory" data-category="skincare" data-parent="beleza">Skincare</button>
-          <button class="subcategory" data-category="all" data-parent="beleza">Ver todos...</button>
+        <div class="search-wrapper">
+          <button class="search-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <circle cx="11" cy="11" r="8" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="grad1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fff"/>
+                  <stop offset="100%" stop-color="#fff"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="search-notif"></span>
+          </button>
+          <div class="search-box">
+            <input type="text" id="search" placeholder="Pesquisar...">
+            <button id="clearBtn" class="clear-btn">×</button>
+          </div>
         </div>
       </div>
-<!--
-      <div class="category">
-        <button class="main-category has-submenu" data-category="brinquedos">Brinquedos</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="educativos" data-parent="brinquedos">Educativos</button>
-          <button class="subcategory" data-category="bonecos" data-parent="brinquedos">Bonecas</button>
-          <button class="subcategory" data-category="ludicos" data-parent="brinquedos">Lúdicos</button>
-          <button class="subcategory" data-category="all" data-parent="brinquedos">Ver todos...</button>
-        </div>
-      </div> 
--->
+    </header>
 
-      <div class="category">
-        <button class="main-category has-submenu" data-category="casa">Casa</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="cozinha" data-parent="casa">Cozinha</button>
-          <button class="subcategory" data-category="decoração" data-parent="casa">Decoração</button>
-          <button class="subcategory" data-category="organização" data-parent="casa">Organização</button>
-          <button class="subcategory" data-category="all" data-parent="casa">Ver todos...</button>
-        </div>
-      </div>
-
-<!-- 
-      <div class="category">
-        <button class="main-category has-submenu" data-category="computadores">Computadores</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="all" data-parent="computadores">Todos</button>
-          <button class="subcategory" data-category="desktops" data-parent="computadores">Desktops</button>
-          <button class="subcategory" data-category="notebooks" data-parent="computadores">Notebooks</button>
-          <button class="subcategory" data-category="acessorios" data-parent="computadores">Acessórios</button>
-        </div>
-      </div>
--->
-<!--
-      <div class="category">
-        <button class="main-category has-submenu" data-category="eletronicos">Eletrônicos</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="all" data-parent="eletronicos">Todos</button>
-          <button class="subcategory" data-category="audio" data-parent="eletronicos">Áudio</button>
-          <button class="subcategory" data-category="video" data-parent="eletronicos">Vídeo</button>
-          <button class="subcategory" data-category="smartphones" data-parent="eletronicos">Smartphones</button>
-        </div>
-      </div>
--->
-<!--
-      <div class="category">
-        <button class="main-category has-submenu" data-category="esportes">Esportes</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="all" data-parent="esportes">Todos</button>
-          <button class="subcategory" data-category="fitness" data-parent="esportes">Fitness</button>
-          <button class="subcategory" data-category="outdoor" data-parent="esportes">Outdoor</button>
-          <button class="subcategory" data-category="equipamentos" data-parent="esportes">Equipamentos</button>
-        </div>
-      </div>
--->
-<!--
-      <div class="category">
-        <button class="main-category has-submenu" data-category="roupas">Roupas</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="all" data-parent="roupas">Todos</button>
-          <button class="subcategory" data-category="masculino" data-parent="roupas">Masculino</button>
-          <button class="subcategory" data-category="feminino" data-parent="roupas">Feminino</button>
-          <button class="subcategory" data-category="infantil" data-parent="roupas">Infantil</button>
-        </div>
-      </div>
--->
-      <div class="category">
-        <button class="main-category has-submenu" data-category="suplementos">Suplementos</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="vitaminas" data-parent="suplementos">Vitaminas</button>
-          <button class="subcategory" data-category="fitness" data-parent="suplementos">Fitness</button>
-          <button class="subcategory" data-category="emagrecimento" data-parent="suplementos">Emagrecimento</button>
-          <button class="subcategory" data-category="all" data-parent="suplementos">Ver todos...</button>
-        </div>
-      </div>
-
-
-      <div class="category">
-        <button class="main-category has-submenu" data-category="saude">Saúde</button>
-        <div class="subcategories">
-          <button class="subcategory" data-category="bemestar" data-parent="saude">Bem-estar</button>
-          <button class="subcategory" data-category="all" data-parent="saude">Ver todos...</button>
-        </div>
-      </div>
-
-        </div>
-
-    <!-- 🔽 LOGO -->
-    <div class="logo">
-
-    <img src="images/logo.svg" alt="Flowers" width="200">
-
-
-
-</div>
-
-
-    <!-- 🔽 CAIXA DE PESQUISA -->
-    <div class="search-wrapper">
-  <button class="search-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
-  <circle cx="11" cy="11" r="8" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round"/>
-  <defs>
-    <linearGradient id="grad1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#fff"/>
-      <stop offset="100%" stop-color="#fff"/>
-    </linearGradient>
-  </defs>
-</svg>
-
-    <span class="search-notif"></span>
-  </button>
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Pesquisar...">
-    <button id="clearBtn" class="clear-btn">×</button>
-  </div>
-</div>
-  </div>
-</header>
-
-
-<!-- 🔥 DESTAQUES -->
     <section class="highlight-section">
       <h2>✨ Destaques</h2>
       <div id="highlights" class="highlights"></div>
     </section>
-   
-<section class="highlight-section1">
-  <h2 id="productsTitle">Todos os produtos</h2>
+    <section class="titulo">
+      <h2 id="productsTitle">Todos os produtos</h2>
     </section>
+
     <div id="products" class="products"></div>
-    <div id="noResults" style="display:none;text-align:center;margin:20px;color:#666;">Nenhum produto encontrado.</div>
+
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <button id="closeModal" class="modal-close" type="button">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <div id="noResults" style="display:none; text-align:center; margin:20px; color:#666;">Nenhum produto encontrado.</div>
+    
     <div id="pagination" class="pagination"></div>
+
     <footer>
-    <!-- Ícones sociais no canto superior direito -->
-    <div class="footer-socials">
-      <a href="https://www.facebook.com/flowerspromos/" target="_blank">
-        <img src="images/facebook.png" alt="Facebook">
-      </a>
-      <a href="https://instagram.com/flowers.promos" target="_blank">
-        <img src="images/instagram.png" alt="Instagram">
-      </a>
-      <a href="https://tiktok.com/@flowers.promos" target="_blank">
-        <img src="images/tiktok.png" alt="TikTok">
-      </a>
-    </div>
-
-    <!-- Centro: logo e direitos autorais -->
-    <div class="footer-center">
-      <img src="images/logo.svg" alt="Flowers Promos" class="footer-logo">
-      <p>&copy; 2025 Flowers Promos - Todos os direitos reservados.</p>
-    </div>
-  </footer>
-    </div>
-  </div>
-
-  <!-- Modal de detalhes -->
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <button id="closeModal" class="modal-close" type="button">×</button>
-
-      <div id="modalBody"></div>
-    </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/flowerspromos/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://instagram.com/flowers.promos" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://tiktok.com/@flowers.promos" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
+      </div>
+      <div class="footer-center">
+        <img src="images/logo.svg" alt="Flowers Promos" class="footer-logo">
+        <p>&copy; 2025 Flowers Promos - Todos os direitos reservados.</p>
+      </div>
+    </footer>
   </div>
 
   <script src="products.js"></script>
   <script src="main.js"></script>
+
 </body>
 </html>
-
-
-
-
-
