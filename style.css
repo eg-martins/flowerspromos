@@ -29,7 +29,7 @@ body::after {
   background: #fff;
   max-width: 1050px;
   margin: 80px auto 60px;      /* centraliza no desktop */
-  padding: 0px 20px 0px; /* espaço: 90px pra compensar o header fixo */
+  padding: 0px 20px 10px; /* espaço: 90px pra compensar o header fixo */
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);}
 @keyframes sparkle { from { background-position: 0 0; } to { background-position: 60px 60px; } }
@@ -1000,7 +1000,7 @@ button.subcategory[data-category="all"]:hover {
   /* Espaço extra para o header */
   .page {
     margin-top: 85px;
-    padding: 0 12px 20px;
+    padding: 0 12px 2px;
     box-sizing: border-box;
   }
   .highlight-section h2 {
