@@ -427,16 +427,16 @@ body::after {
 }
 
 /* ===== BORDER GRADIENTE POR CATEGORIA ===== */
-.product.cat-beleza::before       { background: linear-gradient(90deg, #FF9A9E, #FAD0C4); }
-.product.cat-casa::before         { background: linear-gradient(90deg, #66A6FF, #89F7FE); }
-.product.cat-acessórios::before  { background: linear-gradient(90deg, #FBC2EB, #A6C1EE); }
-.product.cat-suplementos::before { background: linear-gradient(90deg, #FBD786, #f7797d); }
-.product.cat-saude::before       { background: linear-gradient(90deg, #84FAB0, #8FD3F4); }
-.product.cat-eletronicos::before { background: linear-gradient(90deg, #43C6AC, #191654); }
-.product.cat-roupas::before      { background: linear-gradient(90deg, #FFDEE9, #B5FFFC); }
-.product.cat-esportes::before    { background: linear-gradient(90deg, #F7971E, #FFD200); }
-.product.cat-brinquedos::before  { background: linear-gradient(90deg, #FF6A88, #FF99AC); }
-.product.cat-computadores::before{ background: linear-gradient(90deg, #2193b0, #6dd5ed); }
+.product.cat-beleza::before      { background: linear-gradient(90deg, #FFD1DC, #FFB3C6); }
+.product.cat-casa::before        { background: linear-gradient(90deg, #BEE3F8, #A0D8F1); }
+.product.cat-acessórios::before  { background: linear-gradient(90deg, #F6D6FF, #E0B3FF); }
+.product.cat-suplementos::before { background: linear-gradient(90deg, #FFF1B6, #FFE7A3); }
+.product.cat-saude::before       { background: linear-gradient(90deg, #C3FBD8, #A7F0C4); }
+.product.cat-eletronicos::before { background: linear-gradient(90deg, #BFDFFF, #91C2FF); }
+.product.cat-roupas::before      { background: linear-gradient(90deg, #FFE4F0, #FFD4E7); }
+.product.cat-esportes::before    { background: linear-gradient(90deg, #FFD8B0, #FFC594); }
+.product.cat-brinquedos::before  { background: linear-gradient(90deg, #FFB6B9, #FFA1A6); }
+.product.cat-computadores::before{ background: linear-gradient(90deg, #C2E0FF, #99CCFF); }
 
 
 /* ===== ANIMAÇÕES ===== */
