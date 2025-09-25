@@ -259,15 +259,27 @@ body::after {
   position: absolute;
   top: 12px;
   right: 12px;
-  font-size: 1.5rem;
-  color: #ff4d6d;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffe6ec;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #7a051a;
   cursor: pointer;
-  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
   z-index: 10;
 }
 
 .modal-close:hover {
-  color: #e43c5e;
+  background: #ff4d6d;
+  color: #fff;
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .modal-body {
