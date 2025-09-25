@@ -378,16 +378,16 @@ if (clearBtn) {
 }); // fim DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
     const categoryGradients = {
-        beleza: 'linear-gradient(90deg, transparent, #FF9A9E, #FAD0C4, transparent)',
-        casa: 'linear-gradient(90deg, transparent, #66A6FF, #89F7FE, transparent)',
-        acessórios: 'linear-gradient(90deg, transparent, #FBC2EB, #A6C1EE, transparent)',
-        suplementos: 'linear-gradient(90deg, transparent, #FBD786, #f7797d, transparent)',
-        saude: 'linear-gradient(90deg, transparent, #84FAB0, #8FD3F4, transparent)',
-        eletronicos: 'linear-gradient(90deg, transparent, #43C6AC, #191654, transparent)',
-        roupas: 'linear-gradient(90deg, transparent, #FFDEE9, #B5FFFC, transparent)',
-        esportes: 'linear-gradient(90deg, transparent, #F7971E, #FFD200, transparent)',
-        brinquedos: 'linear-gradient(90deg, transparent, #FF6A88, #FF99AC, transparent)',
-        computadores: 'linear-gradient(90deg, transparent, #2193b0, #6dd5ed, transparent)'
+      beleza: 'linear-gradient(90deg, transparent, #FFD1DC, #FFB3C6, transparent)',
+      casa: 'linear-gradient(90deg, transparent, #BEE3F8, #A0D8F1, transparent)',
+      acessórios: 'linear-gradient(90deg, transparent, #F6D6FF, #E0B3FF, transparent)',
+      suplementos: 'linear-gradient(90deg, transparent, #FFF1B6, #FFE7A3, transparent)',
+      saude: 'linear-gradient(90deg, transparent, #C3FBD8, #A7F0C4, transparent)',
+      eletronicos: 'linear-gradient(90deg, transparent, #BFDFFF, #91C2FF, transparent)',
+      roupas: 'linear-gradient(90deg, transparent, #FFE4F0, #FFD4E7, transparent)',
+      esportes: 'linear-gradient(90deg, transparent, #FFD8B0, #FFC594, transparent)',
+      brinquedos: 'linear-gradient(90deg, transparent, #FFB6B9, #FFA1A6, transparent)',
+      computadores: 'linear-gradient(90deg, transparent, #C2E0FF, #99CCFF, transparent)'
     };
 
     const defaultGradient = 'linear-gradient(90deg, transparent, #ff4d6d, transparent)';
