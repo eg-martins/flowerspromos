@@ -138,4 +138,15 @@ const productsData = [
     subcategory: ["maquiagem"],
     link: "https://s.shopee.com.br/5ffdc0ZhjO"
   },
+    {
+    id: "P015",
+    img: "images/produtos/F-015.png",
+    title: "Mop Giratório Duas Águas com Balde e Esfregão - Simplo",
+    desc: "Conheça o Mop Giratório Duas Águas da Simplo, prático, moderno e resistente. Com sistema de lavagem e centrifugação, microfibra de alta qualidade que retém poeira sem soltar fiapos e base articulável com cabo ajustável, alcança facilmente janelas, móveis e todos os tipos de pisos. Água suja e limpa separadas, garantindo higiene e eficiência na limpeza da sua casa.",
+    platform: "Shopee",
+    category: ["Casa"],
+    subcategory: ["Organização"],
+    link: "https://s.shopee.com.br/6KvMkmz1Nl"
+},
+
 ];
